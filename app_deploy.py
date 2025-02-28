@@ -8,7 +8,7 @@ from langchain.chains.summarize import load_summarize_chain
 def generate_response(txt, openai_api_key):
     """Generate a summary using OpenAI's API."""
     # Instantiate the LLM model
-    llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
+    llm = OpenAI(temperature=0, openai_api_key=openai_api_key)
     # Split text
     text_splitter = CharacterTextSplitter()
     texts = text_splitter.split_text(txt)
